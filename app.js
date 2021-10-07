@@ -20,4 +20,3 @@ const newMonth = monthNames.map((data) => {
     return data;
   }
 });
-console.log(newMonth);
