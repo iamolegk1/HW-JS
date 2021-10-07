@@ -13,6 +13,12 @@ const monthNames = [
   "October",
   "November",
   "December",
+  "October",
+  "November",
+  "December",
+  "October",
+  "November",
+  "December",
 ];
 
 const newMonth = monthNames.map((data) => {
@@ -20,4 +26,3 @@ const newMonth = monthNames.map((data) => {
     return data;
   }
 });
-console.log(newMonth);
