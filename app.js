@@ -79,3 +79,31 @@ function filteredMonth(currentValue) {
   return results;
 }
 console.log(filteredMonth(monthNames));
+
+// - Задача №4 напиши функцию, которая принимает массив объектов. С помощью метода map сформируй новый массив в котором будут только те объекты у которых поле с именем id парное число. Новый массив возвращай из функции.
+
+const arrNumbers = [
+  { id: 2 },
+  { id: 1 },
+  { id: 3 },
+  { id: 12 },
+  { id: 6 },
+  { id: 5 },
+  { id: 9 },
+  { id: 8 },
+  { id: 7 },
+  { id: 10 },
+  { id: 11 },
+  { id: 4 },
+];
+
+function pairedArray(data) {
+  const changeNumber = [];
+  data.map((item) => {
+    if (Object.values(item) % 2 == 0) {
+      return changeNumber.push(item);
+    }
+  });
+  return changeNumber.map((num) => num.id);
+}
+console.log(pairedArray(arrNumbers));
