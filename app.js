@@ -1,4 +1,4 @@
-// Задача №1 напиши функцию, которая принимает массив строк. С помощью метода map сформируй новый массив в котором будут только строки размером меньше 4 символов. Новый массив возвращай из функции.
+// Задача №2 напиши функцию, которая принимает массив строк. С помощью метода forEach сформируй новый массив в котором будут только строки размером меньше 5 символов. Новый массив возвращай из функции.
 
 const monthNames = [
   "January",
@@ -15,12 +15,13 @@ const monthNames = [
   "December",
 ];
 
-function getNewMonth(data) {
-  const newMonth = data.map((month) => {
-    if (month.length <= 3) {
-      return month;
+function getResult(data) {
+  const newArray = [];
+  data.forEach((item) => {
+    if (item.length <= 4) {
+      newArray.push(item);
     }
   });
-  return newMonth;
+  return newArray;
 }
-console.log(getNewMonth(monthNames));
+console.log(getResult(monthNames));
