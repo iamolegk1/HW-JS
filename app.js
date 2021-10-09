@@ -107,3 +107,31 @@ function pairedArray(data) {
   return changeNumber.map((num) => num.id);
 }
 console.log(pairedArray(arrNumbers));
+
+// - Задача №5 напиши функцию, которая принимает массив объектов. С помощью метода filter сформируй новый массив в котором будут только те объекты у которых поле с именем id не парное число. Новый массив возвращай из функции.
+
+const arrayNum = [
+  { id: 10 },
+  { id: 1 },
+  { id: 9 },
+  { id: 3 },
+  { id: 2 },
+  { id: 8 },
+  { id: 5 },
+  { id: 7 },
+  { id: 4 },
+  { id: 6 },
+  { id: 12 },
+  { id: 11 },
+];
+
+function unpairedArray(data) {
+  const changeNumber = [];
+  data.filter(function (item) {
+    if (Object.values(item) % 2 !== 0) {
+      return changeNumber.push(item);
+    }
+  });
+  return changeNumber.map((value) => value.id);
+}
+console.log(unpairedArray(arrayNum));
