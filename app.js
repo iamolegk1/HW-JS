@@ -13,16 +13,14 @@ const monthNames = [
   "October",
   "November",
   "December",
-  "October",
-  "November",
-  "December",
-  "October",
-  "November",
-  "December",
 ];
 
-const newMonth = monthNames.map((data) => {
-  if (data.length <= 3) {
-    return data;
-  }
-});
+function getNewMonth(data) {
+  const newMonth = data.map((month) => {
+    if (month.length <= 3) {
+      return month;
+    }
+  });
+  return newMonth;
+}
+console.log(getNewMonth(monthNames));
