@@ -52,3 +52,30 @@ function getResult(data) {
   return newArray;
 }
 console.log(getResult(monthNames));
+
+// Задача №3 напиши функцию, которая принимает массив строк. С помощью метода filter сформируй новый массив в котором будут только строки размером меньше 3 символов. Новый массив возвращай из функции.
+
+const monthNames = [
+  "January",
+  "February",
+  "March",
+  "April",
+  "Ma",
+  "Ju",
+  "July",
+  "Au",
+  "September",
+  "October",
+  "November",
+  "December",
+];
+
+function filteredMonth(currentValue) {
+  const results = currentValue.filter(function (item) {
+    if (item.length <= 2) {
+      return item;
+    }
+  });
+  return results;
+}
+console.log(filteredMonth(monthNames));
