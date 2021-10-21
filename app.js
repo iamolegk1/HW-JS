@@ -135,3 +135,42 @@ function unpairedArray(data) {
   return changeNumber.map((value) => value.id);
 }
 console.log(unpairedArray(arrayNum));
+
+/////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+const rec = (string = "", counter = 0, limit = 10) => {
+  if (counter >= limit) return;
+
+  console.log(string);
+  counter++;
+
+  return rec(string, counter, limit);
+};
+
+rec("Oleg", 0, 10);
+
+/////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+function degreeRec(num, deg) {
+  if (deg != 1) {
+    return num * degreeRec(num, deg - 1);
+  } else {
+    return num;
+  }
+}
+
+console.log(degreeRec(2, 2));
+
+function degreeRec(num, deg) {
+  return deg === 1 ? num : num * degreeRec(num, deg - 1);
+}
+console.log(degreeRec(2, 2));
+
+/////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+function reverse(s) {
+  function rev(s, len, o) {
+    return len === 0 ? o : rev(s, --len, (o += s[len]));
+  }
+  return rev(s, s.length, "");
+}
